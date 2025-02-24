@@ -6,26 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manas Patel's Majestic Panther || ITIS 3135 || Home</title>
     <link rel="stylesheet" href="styles/default.css">
-
 </head>
 
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Manas Patel's Majestic Panther || ITIS 3135</h1>
-    </header>
-
-    <!-- Navigation Links Section -->
-    <nav>
-        <ul>
-            <li><a href="./">Home</a></li>
-            <li><a href="introduction.html">Introduction</a></li>
-            <li><a href="contract.html">Contract</a></li>
-            <li><a href="majesticpanthertricycle/index.html">Whimsical Company</a></li>
-            
-        </ul>
-    </nav>
+    <!-- Dynamically include header -->
+    <div id="header"></div>
 
     <!-- Main Content Section -->
     <main>
@@ -33,28 +19,30 @@
         <p>This is all the content for my ITIS 3135 class.</p>
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <ul>
-            <li><a href="https://www.charlotte.edu">UNCC Home</a></li>
-            <li><a href="https://github.com/manasp17">GitHub</a></li>
-            <li><a href="https://manasp17.github.io">GitHub.io</a></li>
-            <li><a href="https://www.freecodecamp.org/ManasP">FreeCodeCamp</a></li>
-            <li><a href="https://www.codecademy.com/profiles/ManasP">Codecademy</a></li>
-            <li><a href="https://www.linkedin.com/in/manas-patel-3911a1227/">LinkedIn</a></li>
-        </ul>
+    <!-- Dynamically include footer -->
+    <div id="footer"></div>
 
-        <p class="copyright">
-            Page Built By <a href="mpunlimited.co/index.html" id="majesticPantherLink">MP Unlimited</a> &copy; 2025
-        </p>
-        <!-- HTML & CSS Validation Links -->
-        <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
-            <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
-        </a>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
-            <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
-        </a>
-    </footer>
+    <script>
+        // Function to dynamically load the header and footer
+        function loadHeaderFooter() {
+            // Load header
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                });
+
+            // Load footer
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                });
+        }
+
+        // Trigger function when the page loads
+        window.onload = loadHeaderFooter;
+    </script>
 
 </body>
 
