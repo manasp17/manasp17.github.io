@@ -43,13 +43,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: green; /* Green links */
     text-decoration: none;
     font-size: 1.2rem;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: darkgreen; /* Dark green on hover */
 }
 
 /* Main Content Styling */
@@ -84,13 +84,13 @@ footer ul li {
 }
 
 footer ul li a {
-    color: white;
+    color: green; /* Green links in footer */
     text-decoration: none;
     font-size: 1.2rem;
 }
 
 footer ul li a:hover {
-    text-decoration: underline;
+    color: darkgreen; /* Dark green on hover */
 }
 
 footer .copyright {
@@ -102,3 +102,13 @@ footer .copyright {
 footer a {
     margin: 10px;
 }
+/* Change all link colors to green */
+a {
+    color: green;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkgreen; /* Change to dark green on hover */
+}
+
