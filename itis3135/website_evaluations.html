@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Evaluations - CRAP Principles</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+
+<body>
+
+    <!-- Dynamic Header -->
+    <div id="dynamic-header"></div>
+
+    
+
+    <!-- Main Content Section -->
+    <main>
+        <h2>Website Evaluations</h2>
+
+        <!-- Bad Website Evaluation: Userinyerface -->
+        <section>
+            <h3><a href="https://userinyerface.com" target="_blank">Userinyerface</a></h3>
+            <p>A website known for its intentionally frustrating design that manipulates users into making errors while navigating.</p>
+            <ul>
+                <li><strong>Contrast:</strong> Poor contrast with confusing, distracting elements. Text is hard to read.</li>
+                <li><strong>Repetition:</strong> Inconsistent layout and design elements, leading to frustration.</li>
+                <li><strong>Alignment:</strong> Disorganized content and misaligned elements, causing visual confusion.</li>
+                <li><strong>Proximity:</strong> Related items are scattered and difficult to associate, disrupting flow.</li>
+            </ul>
+        </section>
+
+        <!-- Good Website Evaluation: Siteinspire -->
+        <section>
+            <h3><a href="https://www.siteinspire.com" target="_blank">Siteinspire</a></h3>
+            <p>A collection of beautifully designed websites that showcase excellent use of modern design principles.</p>
+            <ul>
+                <li><strong>Contrast:</strong> Excellent contrast, ensuring readability and clear distinctions.</li>
+                <li><strong>Repetition:</strong> Consistent, clean layout with recurring design elements.</li>
+                <li><strong>Alignment:</strong> Perfectly aligned content, providing an organized visual experience.</li>
+                <li><strong>Proximity:</strong> Logical grouping of content with appropriate spacing for clarity.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Dynamic Footer -->
+    <div id="dynamic-footer"></div>
+
+    <!-- JavaScript to Load Dynamic Header and Footer -->
+    <script>
+        // Load Header from header.html
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('dynamic-header').innerHTML = data;
+            });
+
+        // Load Footer from footer.html
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('dynamic-footer').innerHTML = data;
+            });
+    </script>
+
+</body>
+
+</html>
