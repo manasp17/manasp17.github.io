@@ -6,35 +6,111 @@
     <title>My Hobby: Poker</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
+        /* Body styling */
         body {
             font-family: Arial, sans-serif;
-            background-color: black;
-            color: red;
+            background-color: #121212; /* Dark background for contrast */
+            color: #F1F1F1; /* Light text for contrast */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #B22B00; /* Bold red for contrast */
+            color: white;
+            padding: 20px 0;
             text-align: center;
         }
-        header {
-            background-color: red;
-            color: black;
-            padding: 10px;
-        }
+
+        /* Navigation styling */
         nav a {
-            color: black;
+            color: #F1F1F1;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
             font-weight: bold;
-            cursor: pointer;
+            font-size: 18px;
+            transition: color 0.3s;
         }
+        
+        nav a:hover {
+            color: #B22B00; /* Change color on hover for contrast */
+        }
+
+        /* Main section styling */
         section {
             display: none;
-            padding: 20px;
+            padding: 40px;
+            margin: 20px;
+            border: 2px solid #B22B00;
+            border-radius: 8px;
+            background-color: #1F1F1F;
         }
-        #what { display: block; }
+
+        /* Show the 'what' section initially */
+        #what {
+            display: block;
+        }
+
+        /* Heading and figure alignment */
+        h2 {
+            color: #B22B00; /* Contrast with the body */
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
         figure {
             margin: 20px auto;
             text-align: center;
+            padding: 10px;
         }
+
         figcaption {
             font-style: italic;
+            color: #F1F1F1;
+        }
+
+        /* Improve alignment for text */
+        p {
+            line-height: 1.6;
+            font-size: 18px;
+            text-align: justify;
+            max-width: 900px;
+            margin: 0 auto 20px;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #B22B00;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #F1F1F1;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            color: #121212;
+            background-color: #F1F1F1;
+            padding: 5px;
+        }
+
+        /* Responsive layout */
+        @media screen and (max-width: 768px) {
+            nav a {
+                margin: 0 10px;
+                font-size: 16px;
+            }
+
+            p {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -109,18 +185,46 @@
             <p>Poker is a game that challenges both the mind and the emotions. It requires strategy, patience, and a deep understanding of human psychology. The thrill of making a perfect bluff, or of reading your opponents’ tells to make the right call, is what keeps me coming back to the table. I love the mental challenge poker presents, and how it forces me to think critically about every decision I make.</p>
             <p>But it’s not just about winning—poker teaches important life skills like emotional control, risk management, and patience. You have to learn how to handle both wins and losses gracefully, and how to make decisions under pressure. It’s a game of ups and downs, but the journey is what makes it so rewarding. The connections you form with fellow players and the memories made at the table are priceless. That’s why I continue to play poker and why I love it so much.</p>
             <figure>
-                <img src="images/poker6.jpg" alt="Winning poker hand" width="300">
-                <figcaption>A player revealing a winning hand.</figcaption>
+                <img src="images/poker6.jpg" alt="Poker table with chips and cards" width="300">
+                <figcaption>A poker table ready for a new game.</figcaption>
             </figure>
         </section>
     </main>
-    
+
+    <footer>
+        <p class="copyright">
+            Page Built By <a href="../mpunlimited.co/index.html" id="majesticPantherLink">MP Unlimited</a> &copy; 2025
+        </p>
+    </footer>
+    <div class="validation-buttons">
+        <!-- HTML Validation Button -->
+        <a href="https://validator.w3.org/#validate_by_input" target="_blank">
+            <img src="images/acclogo.png" alt="Validate HTML" width="100">
+        </a>
+        
+        <!-- CSS Validation Button -->
+        <a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank">
+            <img src="images/acclogo.png" alt="Validate CSS" width="100">
+        </a>
+        
+        <!-- Accessibility (WCAG) Validation Button -->
+        <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/UNCCID/itis3135/PAGENAMELinks" target="_blank">
+            <img src="images/acclogo.png" alt="Validate Accessibility" width="100">
+        </a>
+
+        <!-- Accumulus Validation Button -->
+        <a href="https://validator.w3.org/" target="_blank">
+            <img src="images/acclogo.png" alt="Validate with Accumulus" width="100">
+        </a>
+    </div>
+
     <script>
         function showSection(sectionId) {
-            document.querySelectorAll('section').forEach(section => {
-                section.style.display = 'none';
+            const sections = document.querySelectorAll("section");
+            sections.forEach(section => {
+                section.style.display = "none";
             });
-            document.getElementById(sectionId).style.display = 'block';
+            document.getElementById(sectionId).style.display = "block";
         }
     </script>
 </body>
