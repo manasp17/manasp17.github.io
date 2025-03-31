@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manas Patel's Majestic Panther || ITIS 3135 || Tables Assignment</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #006633;
+            color: white;
+        }
+
+        /* Alternating row colors */
+        tbody tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        /* Darker top row for complex table */
+        .complex-table thead tr {
+            background-color: #004422;
+        }
+
+        /* Styling for table figure and caption */
+        figure {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        figcaption {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Dynamically include header -->
+    <div id="header"></div>
+
+    <!-- Main Content Section -->
+    <main>
+        <h2>Tables Assignment</h2>
+
+        <!-- Ordered List -->
+        <h3>My Tabular Data</h3>
+        <ol>
+            <li>Robert Downey Jr. - rdj@gmail.com - 25 years</li>
+            <li>Scarlett Johansson - scarlettj@yahoo.com - 20 years</li>
+            <li>Leonardo DiCaprio - leo.d@hollywood.com - 30 years</li>
+            <li>Chris Hemsworth - chris.h@marvel.com - 15 years</li>
+            <li>Tom Holland - tomh.spidey@gmail.com - 8 years</li>
+            <li>Dwayne Johnson - dwayne@therock.com - 28 years</li>
+            <li>Angelina Jolie - angelina.j@movies.com - 35 years</li>
+        </ol>
+
+        <!-- Simple Table -->
+        <h3>Employee Data in Simple Table</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Years of Service</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Robert Downey Jr.</td>
+                    <td>rdj@gmail.com</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>Scarlett Johansson</td>
+                    <td>scarlettj@yahoo.com</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Leonardo DiCaprio</td>
+                    <td>leo.d@hollywood.com</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Chris Hemsworth</td>
+                    <td>chris.h@marvel.com</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Tom Holland</td>
+                    <td>tomh.spidey@gmail.com</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Dwayne Johnson</td>
+                    <td>dwayne@therock.com</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>Angelina Jolie</td>
+                    <td>angelina.j@movies.com</td>
+                    <td>35</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Complex Table -->
+        <h3>Employee Data in Complex Table</h3>
+        <figure>
+            <figcaption>Employee Information</figcaption>
+            <table class="complex-table">
+                <thead>
+                    <tr>
+                        <th>Department</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Years of Service</th>
+                        <th>Monthly Salary ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Actors</td>
+                        <td>Robert Downey Jr.</td>
+                        <td>rdj@gmail.com</td>
+                        <td>25</td>
+                        <td>25000</td>
+                    </tr>
+                    <tr>
+                        <td>Leonardo DiCaprio</td>
+                        <td>leo.d@hollywood.com</td>
+                        <td>30</td>
+                        <td>22000</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">Superheroes</td>
+                        <td>Scarlett Johansson</td>
+                        <td>scarlettj@yahoo.com</td>
+                        <td>20</td>
+                        <td>18000</td>
+                    </tr>
+                    <tr>
+                        <td>Chris Hemsworth</td>
+                        <td>chris.h@marvel.com</td>
+                        <td>15</td>
+                        <td>16000</td>
+                    </tr>
+                    <tr>
+                        <td>Tom Holland</td>
+                        <td>tomh.spidey@gmail.com</td>
+                        <td>8</td>
+                        <td>14000</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Action Stars</td>
+                        <td>Dwayne Johnson</td>
+                        <td>dwayne@therock.com</td>
+                        <td>28</td>
+                        <td>27000</td>
+                    </tr>
+                    <tr>
+                        <td>Angelina Jolie</td>
+                        <td>angelina.j@movies.com</td>
+                        <td>35</td>
+                        <td>20000</td>
+                    </tr>
+                    <!-- Total Row -->
+                    <tr>
+                        <th colspan="3">Total Years of Service</th>
+                        <th>161</th>
+                        <th>142000</th>
+                    </tr>
+                </tbody>
+            </table>
+        </figure>
+    </main>
+
+    <!-- Dynamically include footer -->
+    <div id="footer"></div>
+
+    <script>
+        // Function to dynamically load the header and footer
+        function loadHeaderFooter() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => { document.getElementById('header').innerHTML = data; });
+
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => { document.getElementById('footer').innerHTML = data; });
+        }
+
+        // Trigger function when the page loads
+        window.onload = loadHeaderFooter;
+    </script>
+
+</body>
+
+</html>
