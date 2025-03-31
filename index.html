@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manas Patel's Majestic Panther || ITIS 3135 || Home</title>
+    
+    <!-- Accumulus Script -->
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="itis3135/styles/default.css">
+</head>
+
+<body>
+
+    <!-- Dynamically include header -->
+    <div id="header"></div>
+
+    <!-- Main Content Section -->
+    <main>
+        <h2>ITIS 3135 Home</h2>
+        <p>This is all the content for my ITIS 3135 class.</p>
+    </main>
+
+    <!-- Dynamically include footer -->
+    <div id="footer"></div>
+
+    <script>
+        // Function to dynamically load the header and footer
+        function loadHeaderFooter() {
+            // Load header
+            fetch('itis3135/header.html')
+                .then((response) => {
+                    if (!response.ok) throw new Error("Header not found");
+                    return response.text();
+                })
+                .then((data) => document.getElementById('header').innerHTML = data)
+                .catch((error) => console.error("Error loading header:", error));
+
+            // Load footer
+            fetch('itis3135/footer.html')
+                .then((response) => {
+                    if (!response.ok) throw new Error("Footer not found");
+                    return response.text();
+                })
+                .then((data) => document.getElementById('footer').innerHTML = data)
+                .catch((error) => console.error("Error loading footer:", error));
+        }
+
+        // Trigger function when the page loads
+        window.onload = loadHeaderFooter;
+    </script>
+
+</body>
+
+</html>
