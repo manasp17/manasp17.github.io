@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYO Intro</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script defer src="scripts/survey.js"></script>
+</head>
+<body>
+
+    <h2>BYO Intro</h2>
+    <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+
+    <form id="introForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required value="Your Name"><br><br>
+
+        <label for="mascot">Mascot:</label>
+        <input type="text" id="mascot" required value="Your Mascot"><br><br>
+
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" accept=".jpg,.png" required><br><br>
+
+        <label for="imageCaption">Image Caption:</label>
+        <input type="text" id="imageCaption" required><br><br>
+
+        <label for="personalBackground">Personal Background:</label>
+        <textarea id="personalBackground" required>Your Personal Background</textarea><br><br>
+
+        <label for="professionalBackground">Professional Background:</label>
+        <textarea id="professionalBackground" required>Your Professional Background</textarea><br><br>
+
+        <label for="academicBackground">Academic Background:</label>
+        <textarea id="academicBackground" required>Your Academic Background</textarea><br><br>
+
+        <label for="webDevBackground">Background in Web Development:</label>
+        <textarea id="webDevBackground" required>Your Web Dev Background</textarea><br><br>
+
+        <label for="computerPlatform">Primary Computer Platform:</label>
+        <input type="text" id="computerPlatform" required><br><br>
+
+        <label>Courses Currently Taking:</label>
+        <div id="courses">
+            <input type="text" name="course" class="course-input">
+        </div>
+        <button type="button" id="addCourse">Add Course</button><br><br>
+
+        <label for="funnyThing">Funny Thing About You:</label>
+        <input type="text" id="funnyThing"><br><br>
+
+        <label for="anythingElse">Anything Else?</label>
+        <textarea id="anythingElse"></textarea><br><br>
+
+        <input type="checkbox" id="agreement" required>
+        <label for="agreement">I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.</label><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset" id="resetForm">
+    </form>
+
+    <div id="result" style="display:none;"></div>
+
+</body>
+</html>
