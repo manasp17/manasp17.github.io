@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Dynamically include header -->
+    <div id="header"></div>
+    <link rel="stylesheet" href="styles/default.css">
+    <title>BMR Calculator - Project Overview</title>
+    
+</head>
+<body>
+    <h1>BMR Calculator</h1>
+    <p>Manas Patel</p>
+    <p>3/31/2025</p>
+    
+    <h2>Project Overview</h2>
+    <h3>Application and Purpose:</h3>
+    <p>The Basal Metabolic Rate Calculator is a web application that allows users to calculate their BMR based on personal details. This BMR value will then be used to determine the number of calories needed to maintain, gain, or lose weight. The purpose of the site is to provide an easy-to-use tool that can help individuals understand their caloric needs based on their activity level and body data.</p>
+    
+    <h3>Intended Users:</h3>
+    <p>The intended users are individuals who are interested in understanding their calorie needs for weight management. These users could include individuals interested in fitness, weight loss, or those trying to gain muscle mass.</p>
+    
+    <h3>Overview of the Content:</h3>
+    <p>The website will consist of a homepage (with an introduction and the BMR calculator), informational pages about BMR, and results pages that provide insights based on the user’s inputs. Users will also have access to a FAQ section about nutrition and BMR.</p>
+    
+    <h2>Client Information</h2>
+    <p>Name: [Private]</p>
+    <p>Organization: [Private]</p>
+    <p>Email: [Private]</p>
+    <p>Phone Number: [Private]</p>
+    
+    <h2>Site Map/Wireframe</h2>
+    <p>The site map has pages that make up the site and indicate how people will navigate through them, below is the structure of the website.</p>
+    <ul>
+        <li><strong>Home Page</strong>: Introduce the tool and allow users to input data for BMR calculation.</li>
+        <li><strong>Calculator Page</strong>: Input data for BMR calculation like age, gender, weight, and height.</li>
+        <li><strong>Results Page</strong>: Display the calculated BMR and recommended daily calorie intake for maintenance, weight gain, or weight loss.</li>
+        <li><strong>FAQs Page</strong>: Answer common questions about BMR and Nutrition.</li>
+        <li><strong>Contact Page</strong>: Provide a way for users to get in touch for inquiries.</li>
+    </ul>
+    
+    <h2>Page Design</h2>
+    <h3>1. Home Page</h3>
+    <p><strong>Purpose:</strong> Introduction to the BMR Calculator and general website overview.</p>
+    <p><strong>Audience/Users:</strong> Visitors who are learning about BMR and want to use the tool.</p>
+    <p><strong>Content:</strong> Brief introduction and a link to the calculator page.</p>
+    <p><strong>Data Fields:</strong> No data entry on this page.</p>
+    <p><strong>Links:</strong> Link to the BMR calculator page.</p>
+    <p><strong>Buttons/Actions:</strong> Button to navigate to the calculator page.</p>
+    
+    <h3>2. Calculator Page</h3>
+    <p><strong>Purpose:</strong> Allow users to input personal details (age, height, weight, gender) to calculate BMR.</p>
+    <p><strong>Audience/Users:</strong> Anyone interested in calculating their BMR.</p>
+    <p><strong>Content:</strong> Input fields for age, height, weight, and gender.</p>
+    <p><strong>Data Fields:</strong> Yes, these fields will need validation (non-empty and valid number entries).</p>
+    <p><strong>Links:</strong> Link to results page after form submission.</p>
+    <p><strong>Buttons/Actions:</strong> Submit button to send input data for BMR calculation.</p>
+    
+    <h3>3. Results Page</h3>
+    <p><strong>Purpose:</strong> Display the calculated BMR and caloric needs based on activity level.</p>
+    <p><strong>Audience/Users:</strong> Users who have completed the BMR calculator.</p>
+    <p><strong>Content:</strong> Display the BMR, maintenance calories, and options for gaining or losing weight.</p>
+    <p><strong>Data Fields:</strong> No data entry here, just displaying calculated results.</p>
+    <p><strong>Links:</strong> Return to the calculator or home page.</p>
+    <p><strong>Buttons/Actions:</strong> Reset button to return to the calculator page.</p>
+    
+    <h3>4. FAQs Page</h3>
+    <p><strong>Purpose:</strong> Provide answers to common questions regarding BMR and its importance in weight management.</p>
+    <p><strong>Audience/Users:</strong> General users looking for more information.</p>
+    <p><strong>Content:</strong> List of frequently asked questions and answers.</p>
+    <p><strong>Data Fields:</strong> No data entry here.</p>
+    <p><strong>Links:</strong> Return to other pages on the site (home, calculator, results).</p>
+    <p><strong>Buttons/Actions:</strong> Link to various parts of the website.</p>
+    
+    <h3>5. Contact Page</h3>
+    <p><strong>Purpose:</strong> Allow users to contact the website’s owner for any inquiries or feedback.</p>
+    <p><strong>Audience/Users:</strong> Users with specific inquiries or feedback.</p>
+    <p><strong>Content:</strong> Contact form with fields for name, email, and message.</p>
+    <p><strong>Data Fields:</strong> Yes, all fields must be validated.</p>
+    <p><strong>Links:</strong> None.</p>
+    <p><strong>Buttons/Actions:</strong> Submit button for sending messages.</p>
+    
+    <h2>Dynamic Functionality</h2>
+    <ul>
+        <li><strong>Forms:</strong> The primary dynamic feature will be the BMR calculation form where users input data, they submit it and JS will process the BMR calculation.</li>
+        <li><strong>Calculator:</strong> Once the user submits the data, JS will calculate it and display the results on the calculator page.</li>
+        <li><strong>AJAX:</strong> Will be used to update the results page dynamically without refreshing the page, will improve user experience.</li>
+    </ul>
+    
+    <h2>Example Websites</h2>
+    <ul>
+        <li><a href="https://www.calculator.net/bmr-calculator.html" target="_blank">https://www.calculator.net/bmr-calculator.html</a></li>
+        <li><a href="https://www.myfitnesspal.com" target="_blank">https://www.myfitnesspal.com</a></li>
+    </ul>
+
+
+
+    
+
+    <!-- Dynamically include footer -->
+    <div id="footer"></div>
+
+    <script>
+        // Function to dynamically load the header and footer
+        function loadHeaderFooter() {
+            // Load header
+            fetch('header.html')
+                .then((response) => {
+                    if (!response.ok) throw new Error("Header not found");
+                    return response.text();
+                })
+                .then((data) => document.getElementById('header').innerHTML = data)
+                .catch((error) => console.error("Error loading header:", error));
+
+            // Load footer
+            fetch('footer.html')
+                .then((response) => {
+                    if (!response.ok) throw new Error("Footer not found");
+                    return response.text();
+                })
+                .then((data) => document.getElementById('footer').innerHTML = data)
+                .catch((error) => console.error("Error loading footer:", error));
+        }
+
+        // Trigger function when the page loads
+        window.onload = loadHeaderFooter;
+    </script>
+</body>
+</html>
