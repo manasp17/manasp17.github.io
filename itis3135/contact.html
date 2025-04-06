@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMR Calculator - Contact</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="bmrindex.html">Home</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="results.html">Results</a></li>
+                <li><a href="faqs.html">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="./index.html">Back to ITIS 3135</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Us</h1>
+        <form>
+            <label>Name: <input type="text" required></label><br>
+            <label>Email: <input type="email" required></label><br>
+            <label>Message:<br><textarea required></textarea></label><br>
+            <button type="submit">Send</button>
+        </form>
+    </main>
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>
