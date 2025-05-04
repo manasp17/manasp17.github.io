@@ -150,3 +150,54 @@ a:hover {
         margin: 5px 0;
     }
 }
+/* ======================== */
+/* DARK MODE STYLES         */
+/* ======================== */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode main {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode header {
+    background-color: #003300; /* Darker UNC Charlotte green */
+    color: #e0e0e0;
+}
+
+body.dark-mode nav {
+    background-color: #222;
+}
+
+body.dark-mode nav ul li a {
+    color: #90ee90; /* Light green */
+}
+
+body.dark-mode nav ul li a:hover {
+    color: #00ff00; /* Bright green on hover */
+}
+
+body.dark-mode footer {
+    background-color: #222;
+    color: #e0e0e0;
+}
+
+body.dark-mode footer ul li a {
+    color: #90ee90;
+}
+
+body.dark-mode footer ul li a:hover {
+    color: #00ff00;
+}
+
+body.dark-mode a {
+    color: #90ee90;
+}
+
+body.dark-mode a:hover {
+    color: #00ff00;
+}

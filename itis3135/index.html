@@ -28,7 +28,6 @@
     <div id="footer"></div>
 
     <script>
-        // Function to dynamically load the header and footer
         function loadHeaderFooter() {
             // Load header
             fetch('header.html')
@@ -36,22 +35,28 @@
                     if (!response.ok) throw new Error("Header not found");
                     return response.text();
                 })
-                .then((data) => document.getElementById('header').innerHTML = data)
+                .then((data) => {
+                    document.getElementById('header').innerHTML = data;
+                    initThemeToggle(); // 💡 Initialize theme toggle *after* header is inserted
+                })
                 .catch((error) => console.error("Error loading header:", error));
-
+    
             // Load footer
             fetch('footer.html')
                 .then((response) => {
                     if (!response.ok) throw new Error("Footer not found");
                     return response.text();
                 })
-                .then((data) => document.getElementById('footer').innerHTML = data)
+                .then((data) => {
+                    document.getElementById('footer').innerHTML = data;
+                })
                 .catch((error) => console.error("Error loading footer:", error));
         }
-
-        // Trigger function when the page loads
+    
         window.onload = loadHeaderFooter;
     </script>
+    
+<script src="scripts/theme-toggle.js"></script>
 
 </body>
 
