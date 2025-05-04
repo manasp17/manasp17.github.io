@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Evaluations - CRAP Principles</title>
     <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/theme-toggle.js"></script>
 </head>
 
 <body>
@@ -59,22 +60,26 @@
                     if (!response.ok) throw new Error("Header not found");
                     return response.text();
                 })
-                .then((data) => document.getElementById('header').innerHTML = data)
+                .then((data) => {
+                    document.getElementById('dynamic-header').innerHTML = data;
+                    initThemeToggle(); // Call initThemeToggle after header is loaded
+                })
                 .catch((error) => console.error("Error loading header:", error));
-
+    
             // Load footer
             fetch('footer.html')
                 .then((response) => {
                     if (!response.ok) throw new Error("Footer not found");
                     return response.text();
                 })
-                .then((data) => document.getElementById('footer').innerHTML = data)
+                .then((data) => document.getElementById('dynamic-footer').innerHTML = data)
                 .catch((error) => console.error("Error loading footer:", error));
         }
-
+    
         // Trigger function when the page loads
         window.onload = loadHeaderFooter;
     </script>
+    
 
 </body>
 

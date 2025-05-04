@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manas Patel's Majestic Panther || ITIS 3135 || Contract</title>
     <link rel="stylesheet" href="styles/default.css">
+    <script src="scripts/theme-toggle.js"></script>
 </head>
 
 <body>
@@ -33,10 +34,15 @@
     <!-- Dynamic Footer Section -->
     <div id="footer"></div>
     <script>
-        document.getElementById("footer").innerHTML = fetch("footer.html")
+        // Dynamically load header and footer
+        document.getElementById("header").innerHTML = fetch("header.html")
             .then(response => response.text())
-            .then(text => document.getElementById("footer").innerHTML = text);
+            .then(text => {
+                document.getElementById("header").innerHTML = text;
+                initThemeToggle(); // ✅ Initialize the theme toggle after the header loads
+            });
     </script>
+    
 
 </body>
 
